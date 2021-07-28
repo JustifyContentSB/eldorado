@@ -1,0 +1,810 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Эльдорадо</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="”color-scheme”" content="”light" dark”>
+    <meta name="”supported-color-schemes”" content="”light" dark”>
+    <style>
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+        
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%!important;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+        
+        table td {
+            border-collapse: collapse;
+        }
+        
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        a {
+            display: inline-block;
+            color: inherit;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        .wrapper {
+            font-family: 'Verdana', sans-serif;
+        }
+        
+        .main {
+            background-image: url('http://webbber.ru/eldorado/main-fon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        
+        .header-profile {
+            display: none;
+        }
+        
+        .header-logo__mob {
+            display: none;
+        }
+        
+        .offer-text {
+            box-sizing: border-box;
+            padding: 15px 30px;
+            padding-left: 15px;
+            font-size: 13px;
+            line-height: 16px;
+            color: #fff;
+            background-image: url('http://webbber.ru/eldorado/fon.png');
+            background-repeat: no-repeat;
+        }
+        
+        .offer-text span {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 38px;
+            text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+        }
+        
+        .offer-space {
+            display: none;
+        }
+        
+        .gift td {
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: left;
+        }
+        
+        .gift-product {
+            padding: 0 15px;
+        }
+        
+        .gift-quantity {
+            padding-right: 15px;
+        }
+        
+        .gift td:first-child {
+            border-top-left-radius: 10px;
+            text-align: left;
+        }
+        
+        .gift td:last-child {
+            border-top-right-radius: 10px;
+        }
+        
+        .goods td:first-child {
+            padding-left: 15px;
+        }
+        
+        .goods {
+            color: #353535;
+        }
+        
+        .goods td {
+            border-bottom: 1px solid #f4f4f4;
+        }
+        
+        .goods-link {
+            font-size: 12px;
+            line-height: 17px;
+            color: #353535;
+        }
+        
+        .goods-num {
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .goods-price {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        
+        .delivery-img {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .delivery-text {
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 12PX;
+        }
+        
+        .delivery-text span {
+            padding-bottom: 5px;
+        }
+        
+        .delivery-td {
+            border-bottom: 1px solid #f4f4f4;
+        }
+        
+        .payment {
+            background-color: #fff;
+        }
+        
+        .payment-text {
+            padding-left: 15px;
+            font-size: 17px;
+            line-height: 25px;
+            font-weight: bold;
+        }
+        
+        .payment-price {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        
+        .info-td {
+            padding: 19px 10px 19px 33px;
+            background: #F3F3F3;
+        }
+        
+        .info-td:nth-child(2n) {
+            padding-left: 0;
+        }
+        
+        .info-td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+        
+        .info-td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+        
+        .info-title {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 25px;
+            color: #393D41;
+        }
+        
+        .info-about {
+            font-size: 12px;
+            line-height: 25px;
+        }
+        
+        .info-text {
+            font-size: 11px;
+            line-height: 12px;
+            color: #8C8C8C;
+        }
+        
+        .info-time span {
+            font-weight: 700;
+        }
+        
+        .info-icon {
+            padding-top: 6px;
+        }
+        
+        .text {
+            color: #fff;
+        }
+        
+        .text tr:first-child td {
+            padding-top: 15px;
+        }
+        
+        .text tr:last-child td {
+            padding-bottom: 15px;
+        }
+        
+        .text-wait {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 38px;
+        }
+        
+        .text-eldorado {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 38px;
+        }
+        
+        .support {
+            background: #A60229;
+            color: #fff;
+            font-size: 13px;
+            line-height: 23px;
+        }
+        
+        .features td:first-child {
+            padding: 0 30px;
+        }
+        
+        .footer-top {
+            color: #fff;
+        }
+        
+        .footer-feedback td {
+            padding-left: 30px;
+        }
+        
+        .footer-call {
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 23px;
+        }
+        
+        .footer-tel {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+        }
+        
+        .footer-tel a {
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            font-size: 9px;
+            line-height: 14px;
+            color: #8B8E90;
+        }
+        
+        .footer-td {
+            padding-left: 30px;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .payment {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            [data-ogsc] .payment {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            .delivery {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            [data-ogsc] .delivery {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            .goods {
+                background-color: #fff !important;
+            }
+            [data-ogsc] .goods {
+                background-color: #fff !important;
+            }
+            .gift td {
+                background-color: #7EB928 !important;
+            }
+            [data-ogsc] .gift td {
+                background-color: #7EB928 !important;
+            }
+            .features {
+                background-color: #76BC34 !important;
+            }
+            [data-ogsc] .features {
+                background-color: #76BC34 !important;
+            }
+            .info-td {
+                background-color: #F3F3F3 !important;
+                color: #000;
+            }
+            [data-ogsc] .info-td {
+                background-color: #F3F3F3 !important;
+                color: #000;
+            }
+            .info-title {
+                color: #393D41 !important;
+            }
+            [data-ogsc] .info-title {
+                color: #393D41 !important;
+            }
+            .info-text {
+                color: #8C8C8C !important;
+            }
+            [data-ogsc] .info-text {
+                color: #8C8C8C !important;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .header {
+                width: 100% !important;
+                background-color: #fff !important;
+            }
+            .header-logo {
+                padding-left: 15px;
+            }
+            .header-logo__desktop {
+                display: none !important;
+            }
+            .header-logo__mob {
+                display: table-cell !important;
+            }
+            .header-menu {
+                padding-right: 15px;
+            }
+            .header-profile {
+                display: table-cell !important;
+                margin-right: 15px;
+            }
+            .offer {
+                width: 100% !important;
+            }
+            .offer-man {
+                display: none !important;
+            }
+            .offer-text {
+                display: block;
+                width: 95% !important;
+                margin: 0 auto;
+                background: #A60229;
+                border-radius: 15px;
+            }
+            .offer-text br {
+                display: none;
+            }
+            .offer-text span {
+                display: block !important;
+            }
+            .offer-space {
+                display: table-cell !important;
+            }
+            .gift,
+            .goods,
+            .delivery,
+            .payment,
+            .info,
+            .bonus {
+                width: 95% !important;
+            }
+            .features td:first-child {
+                padding-left: 15px !important;
+            }
+            .features td:last-child {
+                padding-right: 15px !important;
+            }
+            .footer-feedback td,
+            .footer-td {
+                padding-left: 15px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;line-height: 100%;width: 100% !important;">
+    <table class="wrapper" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#2F2F2F" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;font-family: 'Verdana', sans-serif;">
+        <tbody>
+            <tr>
+                <td height="20" style="border-collapse: collapse;"></td>
+            </tr>
+            <tr>
+                <td style="border-collapse: collapse;">
+                    <table cellpadding="0" cellspacing="0" width="600" align="center" bgcolor="#C2002E" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                        <tbody>
+                            <tr>
+                                <td style="border-collapse: collapse;">
+                                    <table class="main" cellpadding="0" cellspacing="0" width="600" bgcolor="#C2002E" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-image: url(http://webbber.ru/eldorado/main-fon.png);background-repeat: no-repeat;background-size: contain;background-position: center center;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="border-collapse: collapse;">
+                                                    <table class="header" cellpadding="0" cellspacing="0" width="540" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="15" style="border-collapse: collapse;"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="header-logo header-logo__desktop" style="border-collapse: collapse;">
+                                                                    <a class="logo" href="https://www.eldorado.ru/" style="display: inline-block;color: inherit;">
+                                                                        <img src="http://webbber.ru/eldorado/logo.png" alt="Эльдорадо" width="150" height="18" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td class="header-logo header-logo__mob" style="border-collapse: collapse;display: none;">
+                                                                    <img src="http://webbber.ru/eldorado/logo-mob.png" alt="Эльдорадо" width="150" height="18" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                </td>
+                                                                <td class="header-profile" width="22" style="border-collapse: collapse;display: none;">
+                                                                    <a href="https://www.eldorado.ru/personal/club/operations/" style="display: inline-block;color: inherit;">
+                                                                        <img src="http://webbber.ru/eldorado/profile.png" alt="Профиль" width="22" height="22" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td width="15" style="border-collapse: collapse;"></td>
+                                                                <td class="header-menu" width="22" style="border-collapse: collapse;">
+                                                                    <a class="menu" href="https://www.eldorado.ru/d/" style="display: inline-block;color: inherit;"><img src="http://webbber.ru/eldorado/menu.png" alt="Каталог" width="23" height="23" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;"></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="15" style="border-collapse: collapse;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table cellpadding="0" cellspacing="0" width="540" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="30" style="border-collapse: collapse;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="offer" cellpadding="0" cellspacing="0" width="570" align="right" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="offer-text" width="388" valign="top" style="border-collapse: collapse;box-sizing: border-box;padding: 15px 30px;padding-left: 15px;font-size: 13px;line-height: 16px;color: #fff;background-image: url(http://webbber.ru/eldorado/fon.png);background-repeat: no-repeat;">
+                                                                    <span style="font-weight: bold;font-size: 14px;line-height: 38px;text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">Ваш заказ №ХХХХХХХХХ обрабатывается </span>                                                                    <br> Мы подтвердим Ваш заказ в ближайшее время, <br> а так же сообщим ожидаемую дату доставки <br> по СМС и эл. почте или позвоним для уточнения.
+                                                                </td>
+                                                                <td class="offer-man" valign="top" style="border-collapse: collapse;">
+                                                                    <img src="http://webbber.ru/eldorado/man.gif" alt="man" width="182" height="188" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="offer-space" height="20" style="border-collapse: collapse;display: none;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="gift" cellpadding="0" cellspacing="0" width="540" height="50" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="gift-product" bgcolor="#7EB928" width="330" style="border-collapse: collapse;padding: 0 15px;font-weight: 500;font-size: 11px;text-transform: uppercase;color: #fff;text-align: left;border-top-left-radius: 10px;">Товар</td>
+                                                                <td class="gift-quantity" bgcolor="#7EB928" style="border-collapse: collapse;padding-right: 15px;font-weight: 500;font-size: 11px;text-transform: uppercase;color: #fff;text-align: left;">Количество</td>
+                                                                <td width="109" bgcolor="#7EB928" style="border-collapse: collapse;font-weight: 500;font-size: 11px;text-transform: uppercase;color: #fff;text-align: left;border-top-right-radius: 10px;">Стоимость</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="goods" cellpadding="0" cellspacing="0" width="540" align="center" bgcolor="#fff" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #353535;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="94" height="84" style="border-collapse: collapse;border-bottom: 1px solid #f4f4f4;padding-left: 15px;">
+                                                                    <img src="http://webbber.ru/eldorado/goods-1.png" alt="Ultra HD (4K) OLED телевизор 55 Sony KD-55A8" width="94" height="59" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                </td>
+                                                                <td width="24" height="84" style="border-collapse: collapse;border-bottom: 1px solid #f4f4f4;"></td>
+                                                                <td class="goods-link" width="195" style="border-collapse: collapse;font-size: 12px;line-height: 17px;color: #353535;border-bottom: 1px solid #f4f4f4;">
+                                                                    <a href="https://www.eldorado.ru/cat/detail/ultra-hd-4k-oled-televizor-55-sony-kd-55a8/" style="display: inline-block;color: inherit;">
+                                                                        Ultra HD (4K) OLED <br> телевизор 55" Sony KD-55A8
+                                                                    </a>
+                                                                </td>
+                                                                <td class="goods-num" width="96" height="84" style="border-collapse: collapse;font-size: 12px;text-align: center;border-bottom: 1px solid #f4f4f4;">
+                                                                    1
+                                                                </td>
+                                                                <td class="goods-price" width="106" height="84" style="border-collapse: collapse;font-weight: bold;font-size: 12px;line-height: 25px;border-bottom: 1px solid #f4f4f4;">
+                                                                    35 990 р.
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="99" height="59" style="border-collapse: collapse;border-bottom: 1px solid #f4f4f4;padding-left: 15px;">
+                                                                    <img src="http://webbber.ru/eldorado/goods-2.png" alt="Робот-пылесос Tefal X-plorer Serie 60 (RG7455WH)" width="99" height="59" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                </td>
+                                                                <td width="24" height="84" style="border-collapse: collapse;border-bottom: 1px solid #f4f4f4;"></td>
+                                                                <td class="goods-link" width="195" style="border-collapse: collapse;font-size: 12px;line-height: 17px;color: #353535;border-bottom: 1px solid #f4f4f4;">
+                                                                    <a href="https://www.eldorado.ru/cat/detail/robot-pylesos-tefal-explorer-serie-60-rg7455wh/" style="display: inline-block;color: inherit;">
+                                                                        Робот-пылесос Tefal X-plorer Serie 60 (RG7455WH)
+                                                                    </a>
+                                                                </td>
+                                                                <td class="goods-num" width="96" height="84" style="border-collapse: collapse;font-size: 12px;text-align: center;border-bottom: 1px solid #f4f4f4;">
+                                                                    1
+                                                                </td>
+                                                                <td class="goods-price" width="106" height="84" style="border-collapse: collapse;font-weight: bold;font-size: 12px;line-height: 25px;border-bottom: 1px solid #f4f4f4;">
+                                                                    35 990 р.
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="delivery" cellpadding="0" cellspacing="0" width="540" height="45" align="center" bgcolor="#fff" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="delivery-td delivery-text" style="border-collapse: collapse;padding-left: 15px;font-weight: bold;font-size: 12px;line-height: 12PX;border-bottom: 1px solid #f4f4f4;">
+                                                                    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">
+                                                                                    <img class="delivery-img" src="http://webbber.ru/eldorado/delivery.png" alt="доставка" width="20" height="14" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: inline-block;margin-right: 10px;max-width: 100%!important;">
+                                                                                </td>
+                                                                                <td style="border-collapse: collapse;">Доставка</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="delivery-td goods-price" width="106" height="45" style="border-collapse: collapse;font-weight: bold;font-size: 12px;line-height: 25px;border-bottom: 1px solid #f4f4f4;">
+                                                                    290 р.
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="payment" cellpadding="0" cellspacing="0" width="540" height="45" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #fff;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="payment-text" style="border-collapse: collapse;padding-left: 15px;font-size: 17px;line-height: 25px;font-weight: bold;">К ОПЛАТЕ:</td>
+                                                                <td class="payment-price" width="106" height="45" style="border-collapse: collapse;font-weight: bold;font-size: 16px;line-height: 25px;">
+                                                                    56 270 р.
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="info" cellpadding="0" cellspacing="0" width="540" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="info-td" width="250" valign="top" style="border-collapse: collapse;padding: 19px 10px 19px 33px;background: #F3F3F3;border-bottom-left-radius: 10px;">
+                                                                    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="info-icon" width="26" valign="top" style="border-collapse: collapse;padding-top: 6px;"><img src="http://webbber.ru/eldorado/recipient.png" alt="получатель" width="26" height="26" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;"></td>
+                                                                                <td width="15" style="border-collapse: collapse;"></td>
+                                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                                    <p class="info-title" style="margin: 0;font-weight: bold;font-size: 12px;line-height: 25px;color: #393D41;">Получатель</p>
+                                                                                    <p class="info-about" style="margin: 0;font-size: 12px;line-height: 25px;">Иван Иванович Иванов</p>
+                                                                                    <p class="info-text" style="margin: 0;font-size: 11px;line-height: 12px;color: #8C8C8C;">Мы направили sms на номер <br> +7 ХХХ ХХХ ХХ ХХ <br> с подтверждением заказа.</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="info-td" width="290" valign="top" style="border-collapse: collapse;padding: 19px 10px 19px 33px;background: #F3F3F3;padding-left: 0;border-bottom-right-radius: 10px;">
+                                                                    <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="info-icon" width="37" valign="top" style="border-collapse: collapse;padding-top: 6px;"><img src="http://webbber.ru/eldorado/info-delivery.png" alt="получатель" width="37" height="26" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;"></td>
+                                                                                <td width="15" style="border-collapse: collapse;"></td>
+                                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                                    <p class="info-title" style="margin: 0;font-weight: bold;font-size: 12px;line-height: 25px;color: #393D41;">Доставка курьером</p>
+                                                                                    <p class="info-about" style="margin: 0;font-size: 12px;line-height: 25px;">Москва, ул. Тихая,д.2а,кв.12</p>
+                                                                                    <p class="info-text info-time" style="margin: 0;font-size: 11px;line-height: 12px;color: #8C8C8C;">
+                                                                                        <span style="font-weight: 700;">Дата доставки заказа:</span> <br> 25.03.2020 <br>
+                                                                                        <span style="font-weight: 700;">Время:</span> с 09:00 по 22:00
+                                                                                    </p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table height="30" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"></table>
+                                                    <table class="bonus" cellpadding="0" cellspacing="0" width="540" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                    <a href="https://www.eldorado.ru/club/referral/" style="display: inline-block;color: inherit;">
+                                                                        <img src="http://webbber.ru/eldorado/bonus-1.gif" alt="Приглашайте друзей и получайте бонусы" width="254" height="138" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td width="30" style="border-collapse: collapse;"></td>
+                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                    <a href="https://www.eldorado.ru/promo/prm-bonuses-for-feedback/" style="display: inline-block;color: inherit;">
+                                                                        <img src="http://webbber.ru/eldorado/bonus-2.gif" alt="Дарим бонусы за отзыв" width="254" height="139" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="text" cellpadding="0" cellspacing="0" width="540" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #fff;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-wait" align="center" style="border-collapse: collapse;font-weight: bold;font-size: 15px;line-height: 38px;">Ждем вас снова!</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-eldorado" align="center" style="border-collapse: collapse;font-weight: normal;font-size: 15px;line-height: 38px;">Ваш Эльдорадо.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="support" cellpadding="0" cellspacing="0" width="600" height="87" align="center" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background: #A60229;color: #fff;font-size: 13px;line-height: 23px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center" style="border-collapse: collapse;">Это письмо было отправлено автоматически. <br> Если вы не создавали заказ на нашем ресурсе, <a href="https://www.eldorado.ru/help/eldorado/contact_us.php" style="display: inline-block;color: inherit;"> сообщите нам</a>                                                                    об этом.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="features" cellpadding="0" cellspacing="0" width="600" height="58" bgcolor="#76BC34" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                        <tbody>
+                                            <tr>
+                                                <td width="160" style="border-collapse: collapse;padding: 0 30px;">
+                                                    <a href="https://www.eldorado.ru/" style="display: inline-block;color: inherit;"><img src="http://webbber.ru/eldorado/logo-2.png" alt="Эльдорадо" width="160" height="18" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;"></a>
+                                                </td>
+                                                <td width="10" style="border-collapse: collapse;"></td>
+                                                <td width="77" style="border-collapse: collapse;">
+                                                    <a href="https://www.eldorado.ru/promo/internetrassrochka/" style="display: inline-block;color: inherit;">
+                                                        <img src="http://webbber.ru/eldorado/features-1.png" alt="Рассрочка онлайн за 1 минуту" width="77" height="50" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                    </a>
+                                                </td>
+                                                <td width="8" style="border-collapse: collapse;"></td>
+                                                <td width="77" style="border-collapse: collapse;">
+                                                    <a href="https://www.eldorado.ru/promo/110-uverennosti-v-tsene/" style="display: inline-block;color: inherit;">
+                                                        <img src="http://webbber.ru/eldorado/features-2.png" alt="Гарантия низкой цены" width="77" height="50" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                    </a>
+                                                </td>
+                                                <td width="8" style="border-collapse: collapse;"></td>
+                                                <td width="77" style="border-collapse: collapse;">
+                                                    <a href="https://www.eldorado.ru/help/delivery/" style="display: inline-block;color: inherit;">
+                                                        <img src="http://webbber.ru/eldorado/features-3.png" alt="быстрая и бережная доставка" width="77" height="50" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                    </a>
+                                                </td>
+                                                <td style="border-collapse: collapse;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="footer" cellpadding="0" cellspacing="0" width="600" align="center" bgcolor="#393E42" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="border-collapse: collapse;">
+                                                    <table cellpadding="0" cellspacing="0" width="600" height="15" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"></table>
+                                                    <table class="footer-top" cellpadding="0" cellspacing="0" width="550" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #fff;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                    <table class="footer-feedback" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="footer-call" style="border-collapse: collapse;font-weight: bold;font-size: 11px;line-height: 23px;padding-left: 30px;">Звоните</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="footer-tel" style="border-collapse: collapse;padding-top: 10px;padding-bottom: 10px;font-weight: bold;font-size: 18px;line-height: 23px;padding-left: 30px;"><a href="tel:88002502525" style="display: inline-block;color: inherit;text-decoration: none;">8 800 250 25 25</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="60" style="border-collapse: collapse;"></td>
+                                                                <td valign="top" style="border-collapse: collapse;">
+                                                                    <table class="footer-soc" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="footer-call" style="border-collapse: collapse;font-weight: bold;font-size: 11px;line-height: 23px;">Следите за новостями</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="10" style="border-collapse: collapse;"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">
+                                                                                    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border-collapse: collapse;">
+                                                                                                    <a href="https://www.instagram.com/eldorado_ru/" style="display: inline-block;color: inherit;">
+                                                                                                        <img src="http://webbber.ru/eldorado/insta.png" alt="Instagram" width="19" height="19" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                                <td width="45" style="border-collapse: collapse;"></td>
+                                                                                                <td style="border-collapse: collapse;">
+                                                                                                    <a href="https://www.facebook.com/Eldorado.Stores" style="display: inline-block;color: inherit;">
+                                                                                                        <img src="http://webbber.ru/eldorado/facebook.png" alt="Facebook" width="10" height="19" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                                <td width="45" style="border-collapse: collapse;"></td>
+                                                                                                <td style="border-collapse: collapse;">
+                                                                                                    <a href="https://ok.ru/eldorado.stores" style="display: inline-block;color: inherit;">
+                                                                                                        <img src="http://webbber.ru/eldorado/ok.png" alt="Odnoklassniki" width="15" height="19" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                                <td width="45" style="border-collapse: collapse;"></td>
+                                                                                                <td style="border-collapse: collapse;">
+                                                                                                    <a href="https://vk.com/eldorado_stores" style="display: inline-block;color: inherit;">
+                                                                                                        <img src="http://webbber.ru/eldorado/vk.png" alt="VK" width="20" height="12" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                                <td width="45" style="border-collapse: collapse;"></td>
+                                                                                                <td style="border-collapse: collapse;">
+                                                                                                    <a href="https://www.youtube.com/user/eldoradovideo" style="display: inline-block;color: inherit;">
+                                                                                                        <img src="http://webbber.ru/eldorado/youtube.png" alt="Youtube" width="19" height="14" style="outline: none;text-decoration: none;border: none;-ms-interpolation-mode: bicubic;margin: 0;padding: 0;display: block;max-width: 100%!important;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="footer-bottom" cellpadding="0" cellspacing="0" width="550" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;font-size: 9px;line-height: 14px;color: #8B8E90;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="footer-td" style="border-collapse: collapse;padding-left: 30px;">
+                                                                    <table class="footer-text" cellpadding="0" cellspacing="0" width="510" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">Вы получили это письмо, так как подписались на рассылку от Эльдорадо. Чтобы не пропускать наши акции и скидки, добавьте адрес <a href="mailto:eldorado@club.eldorado.ru" style="display: inline-block;color: inherit;">eldorado@club.eldorado.ru</a>                                                                                    в адресную книгу.
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="5" style="border-collapse: collapse;"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">Вы можете <a href="#" style="display: inline-block;color: inherit;">отписаться</a>, но мы будем скучать :(</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="25" style="border-collapse: collapse;"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">Цены действительны на момент отправки письма и могут различаться в зависимости от региона покупки.</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="25" style="border-collapse: collapse;"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="footer-td" style="border-collapse: collapse;padding-left: 30px;">
+                                                                    <table class="footer-info" cellpadding="0" cellspacing="0" width="530" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border-collapse: collapse;">
+                                                                                    Веб-версия по <a href="#" style="display: inline-block;color: inherit;">ссылке.</a>
+                                                                                </td>
+                                                                                <td align="right" style="border-collapse: collapse;"> © Эльдорадо, 2021</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="30" style="border-collapse: collapse;"></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="20" style="border-collapse: collapse;"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
